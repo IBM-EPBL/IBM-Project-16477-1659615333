@@ -12,8 +12,7 @@ This webpage contains Short Introduction `about Me`, `Skills`, `Personal details
 
 ## Screenshots
 ### Resume Page
-The Below screenshot shows My Resume Webpage which contain information about me.
-It also have `Download CV` and `Hire Me` button.
+
 
 ![Html Resume Pre)](https://user-images.githubusercontent.com/54212165/192536556-a16c1069-9634-457b-a005-74b179528c41.png)
 
