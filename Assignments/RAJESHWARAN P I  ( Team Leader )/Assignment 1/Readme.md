@@ -15,15 +15,8 @@ This webpage contains Short Introduction `about Me`, `Skills`, `Personal details
 The Below screenshot shows My Resume Webpage which contain information about me.
 It also have `Download CV` and `Hire Me` button.
 
-![Html Resume Pre)]()
+![Html Resume Pre)](https://user-images.githubusercontent.com/54212165/192536556-a16c1069-9634-457b-a005-74b179528c41.png)
 
-
-### Resume Download Page
-The Below screenshot shows Resume pdf download page where Recruiter can download my resume.
-where it is already uploaded in My Google Drive account. 
-This will redirect him when recruiter  click `Download CV` button.
-
-![My Resume Pre)]()
 
 ## Tech Stack
 
@@ -31,7 +24,7 @@ This will redirect him when recruiter  click `Download CV` button.
 
 ## 🔗 Links
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rajeshwaran-p-i)
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
+
 
 
 
