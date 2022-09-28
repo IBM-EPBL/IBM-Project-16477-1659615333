@@ -2,4 +2,4 @@
 ### Resume Page
 
 
-![Html Resume Pre)](https://user-images.githubusercontent.com/54212165/192536556-a16c1069-9634-457b-a005-74b179528c41.png)
+[![Html Resume Pre)(https://user-images.githubusercontent.com/105370811/192711518-94915776-4727-474e-a1be-8577409053ba.PNG)]
