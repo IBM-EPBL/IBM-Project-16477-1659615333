@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+    name: ibm-docker
+    labels:
+        app: ibm-docker
+
+spec:
+    selector:
+        matchLabels:
+            app: ibm-docker
+    replicas: 1
+
+    template:
+        metadata:
+            labels:
+                app: ibm-docker
+
+        spec:
+            containers:
+                - name: ibm-docker
+
+                  image: icr.io/ibm-docker/imsr
+
+                  imagePullPolicy: Always
+
+                  ports:
+                      - containerPort: 5000
+                  env:
+                      - name: DISABLE_WEB_APP
+                        value: "false"
