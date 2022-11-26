@@ -47,5 +47,6 @@ Create a software that manages inventory for retailers with an easy-to-use inter
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=BNyw_mMilFw" target="_blank">
  <img src="http://img.youtube.com/vi/BNyw_mMilFw/mqdefault.jpg" alt="Watch the video" width="240" height="180" border="10" />
 </a>
+<br>
 
-[Try Go Products](http://169.51.206.110:32159/){: .btn}
+> > :Button label=Try Go Products, url=http://169.51.206.110:32159
