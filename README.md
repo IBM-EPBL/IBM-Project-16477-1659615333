@@ -43,8 +43,9 @@ Create a software that manages inventory for retailers with an easy-to-use inter
 ## Technical Architecture:
 ![image](https://lh3.googleusercontent.com/CREVNwiSXyEeHRqKw-PyOLl3407cgeGKXaoHe4XxiA2BKwElixI7EHYyIo65PCZwi7t7vvg_wvZ6V44M_i9K0n7rk4MkKcfoSGN6GKBwTDVBYVIoon8EfgcBwBiKNA)
 
-<a><button name="button" style = "color: Black;" onclick="http://169.51.206.110:32159">Try Go Products</button></a>
+
 <br> 
+Try Our Application at: http://169.51.206.110:32159
 
 
 <br>
