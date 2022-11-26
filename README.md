@@ -1,6 +1,5 @@
 <div align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg"  align="center" alt="drawing" width="200" />
-   <img src="https://smartinternz.com/assets/smartinternz_thumb.png"  align="center" alt="drawing" width="200" />
   <br/>
    
 </div>
