@@ -1,17 +1,63 @@
-{% extends 'layout.html' %}
+{% extends 'basehome.html' %}
 
-{% block body%}
-<style>
-    body {
-      background-image: url('https://softwareauggest-blogimages.s3.ca-central-1.amazonaws.com/blog/wp-content/uploads/2016/02/14191055/9-Top-Retail-Inventory-Management-Software-for-SMEs-in-India-1068x578.png');
-    }
-    </style><br><br>
-<div class="jumbotron mt-4">
-    <h7 class="display-4">Inventory Management System for Retailers</h7><br><br>
-    {% if session.logged_in == NULL %}
-        <center><a href="/register" class="btn btn-primary btn-lg">Register</a>
-        <a href="/login" class="btn btn-success btn-lg">Login</a></center>
-    {% endif %}<br>
-    <center><h5>Created By: Rajeshwaran, Joffin Joel, Sivakumar, Nambu sai Prakash</h5><center>
-</div>
-{% endblock %}
+{% block content %}
+
+<nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom">
+    <div class="container"><a class="navbar-brand" href="#">GoProducts</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarResponsive"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/register">Sign Up</a></li>
+                <li class="nav-item"><a class="nav-link" href="/login">Log In</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<header class="text-center text-white masthead">
+    <div class="masthead-content">
+        <div class="container">
+            <h1 class="masthead-heading mb-0" style="font-size: 85px;">One application for your needs</h1>
+            <h2 class="masthead-subheading mb-0">to manage your stocks</h2><a class="btn btn-primary btn-xl rounded-pill mt-5" role="button" href="#">Learn More</a>
+        </div>
+    </div>
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+</header>
+<section>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5"><img class="rounded-circle img-fluid" src="static/img/make_gst_bills_and_share_with_your_customers.webp"></div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <h2 class="display-4">Track the history</h2>
+                    <p>Go Product brings the finest inventory management software with incredibly effective features. It helps improve business performance.<br></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5"><img class="rounded-circle img-fluid" src="static/img/check_inventory_instantly.webp"></div>
+            </div>
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5">
+                    <h2 class="display-4" style="font-size: 51px;">Manage Inventory Seamlessly<br></h2>
+                    <p>Go Product brings the finest inventory management software with incredibly effective features. It helps improve business performance.<br></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="py-5 bg-black">
+    <div class="container">
+        <p class="text-center text-white m-0 small">Copyright&nbsp;© GoProducts 2022</p>
+    </div>
+</footer>
+
+{% endblock content %}

@@ -5,7 +5,7 @@
      <hr>
        {% for location in locations %}
        <div>
-        <h3 class="mt-4 text-primary" >{{location}}</h3>
+        <h3 class="mt-4 text-primary" >Product Loaction Status</h3>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -16,13 +16,11 @@
             </thead>
             <tbody>
                     {% for product in products %}
-                       {% if product.LOCATION_ID == location %}
                    <tr>
                     <td>{{product.PRODUCT_ID}}</td>
                     <td>{{product.LOCATION_ID}}</td>
                     <td>{{product.QTY}}</td>
                    </tr>
-                       {% endif %}
                    {% endfor %}
             </tbody>
         </table>
