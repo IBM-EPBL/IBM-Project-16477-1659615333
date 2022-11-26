@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 app.secret_key='aSGSGFSGsd'
 
-conn=ibm_db.connect("DATABASE=bludb;HOSTNAME=IBM_HOST;PORT=IBM_PORT;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=IBM_UI;PWD=IBM_PASSWORD;",'','')
+conn=ibm_db.connect("DATABASE=bludb;HOSTNAMEIBM_HOST;PORT=IBM_PORT;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=IBM_USERNAME;PWD=IBM_PASSWORD;",'','')
 
 #Index
 @app.route('/')
@@ -102,7 +102,7 @@ def register():
         name = form.name.data
         email = form.email.data
         username = form.username.data
-        password = sha256_crypt.encrypt(str(form.password.data))
+        password = form.password.data
 
         sql1="INSERT INTO users(name, email, username, password) VALUES(?,?,?,?)"
         stmt1 = ibm_db.prepare(conn, sql1)
@@ -125,34 +125,28 @@ def login():
     if request.method == 'POST':
         #Get form fields
         username = request.form['username']
-        password_candidate = request.form['password']
+        password = request.form['password']
 
-        sql1="Select * from users where username = ?"
+        sql1="SELECT COUNT(*) FROM users WHERE USERNAME=? AND PASSWORD=?"
         stmt1 = ibm_db.prepare(conn, sql1)
         ibm_db.bind_param(stmt1,1,username)
+        ibm_db.bind_param(stmt1,2,password)
         result=ibm_db.execute(stmt1)
         d=ibm_db.fetch_assoc(stmt1)
-        if result > 0:
-            #Get the stored hash
-            data = d
-            password = data['PASSWORD']
-
-            #compare passwords
-            if sha256_crypt.verify(password_candidate, password):
+        if d['1'] == 1:
                 #Passed
                 session['logged_in'] = True
                 session['username'] = username
 
                 flash("you are now logged in","success")
                 return redirect(url_for('dashboard'))
-            else:
+        else:
                 error = 'Invalid Login'
                 return render_template('login.html', error=error)
-            #Close connection
-            cur.close()
-        else:
-            error = 'Username not found'
-            return render_template('login.html', error=error)
+        cur.close()  #Close connection
+    else:
+            
+            return render_template('login.html')
     return render_template('login.html')
 
 #check if user logged in
@@ -482,13 +476,13 @@ def add_product_movements():
 
             sql2="Update products set product_num=? where product_id=?"
             stmt2 = ibm_db.prepare(conn, sql2)    
-            ibm_db.bind_param(stmt2,1,current_num['PRODUCT_NUM']-qty)
+            ibm_db.bind_param(stmt2,1,current_num['PRODUCT_NUM']- qty)
             ibm_db.bind_param(stmt2,2,product_id)
             ibm_db.execute(stmt2)
 
             alert_num=current_num['PRODUCT_NUM']-qty
 
-            if(alert_num<=0):
+            if(alert_num<=5):
                 alert("Please update the quantity of the product {}, Atleast {} number of pieces must be added to finish the pending Product Movements!".format(product_id,-alert_num))
         
         elif to_location=="Main Inventory":
