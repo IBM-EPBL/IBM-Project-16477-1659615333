@@ -16,7 +16,7 @@ def alert(main_msg):
    try:
       server = smtplib.SMTP_SSL('smtp.sendgrid.net', 465)
       server.ehlo()
-      server.login('apikey', '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')
+      server.login('apikey', 'SENDGRID API')
       server.sendmail(mail_from, mail_to, msg.as_string())
       server.close()
       print("Mail sent successfully!")
