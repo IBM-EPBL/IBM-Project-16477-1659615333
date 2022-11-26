@@ -23,4 +23,4 @@ Hurrah🎉!! You are good to go! Launch the Application! And You will see the ap
 **Step 3:** Create docker image for your application and deploy it using IBM Container and Kubernetes Service.
 
 
-Our Application's Public URL : http://169.51.206.110:31962/
+Our Application's Public URL : http://169.51.206.110:32159/ 
